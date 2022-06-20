@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/white">
 
     <EditText
         android:id="@+id/textView"
@@ -11,7 +11,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:text="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg" />
+        android:text="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_1280.jpg"
+        android:textColor="@color/black" />
 
     <ImageView
         android:id="@+id/image"

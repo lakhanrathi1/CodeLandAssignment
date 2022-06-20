@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        if (checkPermission()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, Uri.parse("package:" + BuildConfig.APPLICATION_ID));
         startActivityForResult(intent, APP_STORAGE_ACCESS_REQUEST_CODE);
         }
-
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 22);
     }
 
     private boolean checkPermission() {
